@@ -27,7 +27,7 @@ function refreshToken() {
 const IS_SERVER = typeof window === "undefined";
 
 Instance.interceptors.request.use(
-  (config: AxiosRequestConfig) => {
+  (config) => {
     if (!IS_SERVER) {
       const token = "";
       if (token) {
