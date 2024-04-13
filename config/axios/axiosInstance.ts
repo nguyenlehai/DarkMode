@@ -62,8 +62,7 @@ Instance.interceptors.response.use(
           window.location.href = "/login";
         });
     } else {
-      delete axios.defaults.headers.common["Authorization"];
-      window.location.href = "/login";
+      // TODO, handler for special case, like Error 400, 500,..
     }
     return Promise.reject(error);
   },
